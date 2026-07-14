@@ -62,7 +62,7 @@ def format_place(place):
 
 @st.cache_data
 def load_data():
-    df = pd.read_excel("results.xlsx", sheet_name="data")
+    df = pd.read_excel("para race results.xlsx", sheet_name="data")
     df["Time_seconds"] = df["Time"].apply(time_to_seconds)
     df["Place_value"] = pd.to_numeric(df["Place"], errors="coerce")
     df["Date"] = pd.to_datetime(df["Date"])
